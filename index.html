@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sewa Motor — Motor Sport Bali 2026/2027 | Santika's Rent</title>
+  <meta name="description"
+    content="Sewa motor baru di Bali. Kawasaki ZX25RR, Honda Stylo, Yamaha Filano. Mulai 80K/hari. Helm & jas hujan gratis. Antar ke hotel & villa." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-gray-900">
+  <!-- ════ HEADER ════ -->
+  <header id="main-header"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 px-6 md:px-10 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-2.5">
+      <div class="w-7 h-7 rounded-lg bg-red-500 flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-map-marker-alt text-white text-xs"></i>
+      </div>
+      <span class="logo-text font-bold text-base text-white tracking-tight transition-colors duration-300">Santika's
+        Rent</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#home" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors">Home</a>
+      <a href="#bikes" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors">Motor
+        Kami</a>
+      <a href="#process" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors">Cara
+        Sewa</a>
+      <a href="#why"
+        class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors">Keunggulan</a>
+      <a href="#faq" class="nav-link text-sm font-medium text-white/90 hover:text-white transition-colors">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/628113972162"
+        class="btn-wa-nav flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold border-2 border-white/60 text-white bg-white/10 backdrop-blur hover:bg-white/20 transition-all">
+        <i class="fab fa-whatsapp text-base"></i>
+        <span class="hidden sm:inline">WhatsApp</span>
+      </a>
+      <button id="hamburger" class="md:hidden text-gray-400 text-2xl w-10 h-10 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none">
+  <i class="fas fa-bars"></i>
+</button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] bg-gray-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 md:hidden">
+    
+    <div id="mobile-panel" class="absolute top-0 right-0 w-[280px] h-full bg-white translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] flex flex-col shadow-2xl">
+        
+        <div class="p-6 flex justify-between items-center border-b border-gray-50">
+            <span class="font-bold text-gray-800 tracking-tight">Navigasi</span>
+            <button id="close-menu" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-400 hover:text-red-500 transition-colors">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+
+        <nav class="flex flex-col p-6 gap-y-1">
+            <a href="#home" class="mobile-nav-link py-4 px-4 text-lg font-semibold text-gray-700 hover:bg-gray-50 rounded-xl transition-all flex justify-between items-center group">
+                Home <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition-all"></i>
+            </a>
+            <a href="#bikes" class="mobile-nav-link py-4 px-4 text-lg font-semibold text-gray-700 hover:bg-gray-50 rounded-xl transition-all flex justify-between items-center group">
+                Motor Kami <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition-all"></i>
+            </a>
+            <a href="#process" class="mobile-nav-link py-4 px-4 text-lg font-semibold text-gray-700 hover:bg-gray-50 rounded-xl transition-all flex justify-between items-center group">
+                Cara Sewa <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition-all"></i>
+            </a>
+            <a href="#why" class="mobile-nav-link py-4 px-4 text-lg font-semibold text-gray-700 hover:bg-gray-50 rounded-xl transition-all flex justify-between items-center group">
+                Keunggulan <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition-all"></i>
+            </a>
+            <a href="#faq" class="mobile-nav-link py-4 px-4 text-lg font-semibold text-gray-700 hover:bg-gray-50 rounded-xl transition-all flex justify-between items-center group">
+                FAQ <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition-all"></i>
+            </a>
+        </nav>
+
+        <div class="mt-auto p-6 bg-gray-50">
+            <p class="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold mb-4 text-center">Butuh Bantuan?</p>
+            <a href="https://wa.me/628113972162" class="w-full bg-wa text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg shadow-green-100 active:scale-95 transition-transform">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                <span>Chat Admin</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+  <!-- ════ HERO ════ -->
+  <section id="home" class="relative w-full h-screen min-h-[620px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=85&w=2000"
+        alt="Jalan Bali" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0"
+        style="background:linear-gradient(to bottom,rgba(0,0,0,.22) 0%,rgba(0,0,0,.08) 18%,rgba(0,0,0,.38) 48%,rgba(0,0,0,.58) 100%)">
+      </div>
+    </div>
+    <div class="relative z-10 text-center px-5 max-w-2xl w-full">
+     <div class="relative z-10 flex flex-col items-center justify-center text-center px-5 w-full mx-auto">
+  <h1 class="anim-2 font-serif text-white mb-5 text-center leading-[1.1] w-full" style="font-size:clamp(38px,6vw,72px);">
+    <span class="block w-full">Sewa Motor</span>
+    <span class="block md:whitespace-nowrap tracking-tighter">
+      Sport & Matic di Bali
+    </span>
+  </h1>
+</div>
+      <p class="anim-3 text-white/85 mb-8 leading-relaxed" style="font-size:clamp(13px,1.9vw,16px);">
+        Motor baru model 2024/2025 &bull; Mulai 80K/hari &bull; 2 Helm &amp; 2 jas hujan &bull;<br
+          class="hidden sm:block"> Antar ke hotel &amp; villa
+      </p>
+      <a href="https://wa.me/628113972162"
+        class="anim-4 inline-flex items-center gap-3 bg-white text-gray-900 font-bold px-9 py-4 rounded-full text-base shadow-2xl hover:scale-105 transition-all duration-200">
+        <i class="fab fa-whatsapp text-wa text-xl"></i>
+        Chat WhatsApp untuk Booking
+      </a>
+    </div>
+    <div class="anim-5 absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <span class="text-white/50 text-[10px] font-bold tracking-[3px] uppercase">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ════ TICKER ════ -->
+  <div class="bg-gray-950 py-3 overflow-hidden">
+    <div class="marquee-wrap">
+      <div class="marquee-track text-xs font-semibold tracking-widest uppercase text-white/50">
+        <span class="px-8">✦ Kawasaki ZX25RR 2023</span><span class="px-8">✦ Honda Stylo 150cc</span><span
+          class="px-8">✦ Yamaha Filano</span><span class="px-8">✦ Mulai 80K/hari</span><span class="px-8">2 Helm & Jas
+          Hujan Gratis untuk motor matic</span><span class="px-8">✦ Antar Hotel & Villa</span>
+        <span class="px-8">✦ Kawasaki ZX25RR 2023</span><span class="px-8">✦ Honda Stylo 150cc</span><span
+          class="px-8">✦ Yamaha Filano</span><span class="px-8">✦ Mulai 80K/hari</span><span class="px-8">2 Helm & Jas
+          Hujan Gratis untuk motor matic</span><span class="px-8">✦ Antar Hotel & Villa</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════ STATS ════ -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 gap-6 text-center justify-items-center">
+      <div class="reveal reveal-d2">
+        <div class="text-4xl font-serif font-bold mb-1">3<span class="text-wa">+</span></div>
+        <div class="text-sm text-gray-500">Pilihan Motor</div>
+      </div>
+      <div class="reveal reveal-d3">
+        <div class="text-4xl font-serif font-bold mb-1">05 AM<span class="text-wa">-10 PM</span></div>
+        <div class="text-sm text-gray-500">Siap Melayani</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════ MOTOR ════ -->
+  <section id="bikes" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="text-wa text-sm font-bold tracking-widest uppercase">Armada Kami</span>
+        <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mt-3 mb-4">Pilihan Motor Terbaik</h2>
+        <p class="text-gray-500 max-w-xl mx-auto">Tiga armada unggulan siap menemani petualanganmu di Bali — dari sport
+          hingga retro-stylish.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- ZX25RR -->
+        <div class="bike-card reveal reveal-d1 bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="relative bg-gradient-to-br from-gray-900 to-green-950 h-56 flex items-center justify-center p-6">
+            <span class="absolute top-3 left-3 bg-red-500 text-white text-[11px] font-bold px-3 py-1 rounded-full">Sport
+              250cc</span>
+            <svg class="bike-img w-60 h-36" style="animation-delay:.1s" viewBox="0 0 240 120" fill="none">
+              <circle cx="52" cy="90" r="26" stroke="#25D366" stroke-width="5.5" fill="none" />
+              <circle cx="52" cy="90" r="9" fill="#25D366" />
+              <circle cx="188" cy="90" r="26" stroke="#25D366" stroke-width="5.5" fill="none" />
+              <circle cx="188" cy="90" r="9" fill="#25D366" />
+              <line x1="52" y1="90" x2="98" y2="68" stroke="#6b7280" stroke-width="4" stroke-linecap="round" />
+              <path d="M98,68 Q108,42 124,36 Q144,30 162,34 Q178,38 186,58 L188,90" fill="none" stroke="none" />
+              <path d="M98,68 Q110,44 128,38 Q150,30 165,34 Q182,40 186,60 Q176,70 160,73 Q126,78 98,70 Z"
+                fill="#1f2937" stroke="#374151" stroke-width="1.5" />
+              <path d="M112,56 Q130,44 155,40 Q170,38 179,48" stroke="#25D366" stroke-width="2.5" stroke-linecap="round"
+                fill="none" />
+              <ellipse cx="183" cy="54" rx="9" ry="7" fill="#fde68a" opacity=".9" />
+              <path d="M102,70 Q120,64 142,63 Q158,63 164,68" stroke="#6b7280" stroke-width="3.5" stroke-linecap="round"
+                fill="none" />
+              <path d="M84,80 Q96,84 112,82 Q122,80 128,84" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"
+                fill="none" />
+              <line x1="168" y1="42" x2="175" y2="33" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="172" y1="33" x2="182" y2="33" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-lg">Kawasaki ZX25RR</h3>
+              <span class="text-xs bg-green-100 text-green-700 font-semibold px-2.5 py-1 rounded-full">Tersedia</span>
+            </div>
+            <p class="text-gray-400 text-xs font-bold uppercase tracking-wider mb-3">Tahun 2023 · 250cc 4-Silinder</p>
+            <p class="text-gray-500 text-sm mb-4">Supersport 250cc 4-silinder paling kencang. Pengalaman berkendara tak
+              terlupakan di jalanan Bali.</p>
+            <div class="flex items-baseline gap-1 mb-5"><span class="text-2xl font-bold">Rp 600K</span><span
+                class="text-gray-400 text-sm">/hari</span></div>
+            <ul class="text-sm text-gray-500 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-wa text-xs"></i> Helm full face gratis
+              </li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-wa text-xs"></i> Antar ke hotel/villa</li>
+            </ul>
+            <a href="https://wa.me/628113972162?text=Halo%2C%20saya%20mau%20booking%20Kawasaki%20ZX25RR%202023"
+              class="block text-center bg-wa text-white font-bold py-3 rounded-2xl hover:bg-wa-dark transition-colors">
+              <i class="fab fa-whatsapp mr-2"></i>Booking Sekarang
+            </a>
+          </div>
+        </div>
+
+        <!-- Honda Stylo -->
+        <div class="bike-card reveal reveal-d2 bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="relative bg-gradient-to-br from-rose-50 to-pink-100 h-56 flex items-center justify-center p-6">
+            <span
+              class="absolute top-3 left-3 bg-pink-500 text-white text-[11px] font-bold px-3 py-1 rounded-full">Stylish
+              ✨</span>
+            <svg class="bike-img w-60 h-36" style="animation-delay:.4s" viewBox="0 0 240 120" fill="none">
+              <circle cx="52" cy="90" r="26" stroke="#f43f5e" stroke-width="5.5" fill="none" />
+              <circle cx="52" cy="90" r="9" fill="#f43f5e" />
+              <circle cx="188" cy="90" r="26" stroke="#f43f5e" stroke-width="5.5" fill="none" />
+              <circle cx="188" cy="90" r="9" fill="#f43f5e" />
+              <path d="M65,70 Q76,46 96,40 Q118,33 146,36 Q168,39 186,62 Q176,76 158,78 Q112,84 68,78 Z" fill="#fda4af"
+                stroke="#fb7185" stroke-width="1.5" />
+              <path d="M78,74 Q105,66 138,65 Q154,65 162,70 Q140,78 105,79 Q82,79 72,74 Z" fill="white" opacity=".5" />
+              <path d="M140,36 Q155,30 166,35 Q172,40 168,50 Q157,44 138,42 Z" fill="#bfdbfe" opacity=".75" />
+              <path d="M76,76 Q100,70 124,69 Q140,69 152,74" stroke="#be185d" stroke-width="3" stroke-linecap="round"
+                fill="none" />
+              <line x1="182" y1="64" x2="188" y2="90" stroke="#fda4af" stroke-width="5" stroke-linecap="round" />
+              <line x1="52" y1="90" x2="78" y2="72" stroke="#fb7185" stroke-width="4" stroke-linecap="round" />
+              <circle cx="183" cy="56" r="9" fill="#fde68a" opacity=".9" />
+              <circle cx="183" cy="56" r="5.5" fill="#fef3c7" />
+              <line x1="160" y1="44" x2="167" y2="34" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="163" y1="34" x2="174" y2="33" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M86,73 Q110,67 136,66" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".55" />
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-lg">Honda Stylo 150</h3>
+              <span class="text-xs bg-green-100 text-green-700 font-semibold px-2.5 py-1 rounded-full">Tersedia</span>
+            </div>
+            <p class="text-gray-400 text-xs font-bold uppercase tracking-wider mb-3">150cc · Retro-Modern</p>
+            <p class="text-gray-500 text-sm mb-4">Desain retro-modern nan elegan, instagramable untuk keliling spot
+              keren di Bali dengan gaya.</p>
+            <div class="flex items-baseline gap-1 mb-5"><span class="text-2xl font-bold">Rp 100K</span><span
+                class="text-gray-400 text-sm">/hari</span></div>
+            <ul class="text-sm text-gray-500 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-wa text-xs"></i> 2 Helm
+              </li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-wa text-xs"></i> 2 Jas hujan gratis</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-wa text-xs"></i> Antar ke hotel/villa</li>
+            </ul>
+            <a href="https://wa.me/628113972162?text=Halo%2C%20saya%20mau%20booking%20Honda%20Stylo%20150"
+              class="block text-center bg-wa text-white font-bold py-3 rounded-2xl hover:bg-wa-dark transition-colors">
+              <i class="fab fa-whatsapp mr-2"></i>Booking Sekarang
+            </a>
+          </div>
+        </div>
+
+        <!-- Yamaha Filano -->
+        <div class="bike-card reveal reveal-d3 bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="relative bg-gradient-to-br from-sky-50 to-blue-100 h-56 flex items-center justify-center p-6">
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[11px] font-bold px-3 py-1 rounded-full">New
+              ✦</span>
+            <svg class="bike-img w-60 h-36" style="animation-delay:.7s" viewBox="0 0 240 120" fill="none">
+              <circle cx="52" cy="90" r="26" stroke="#3b82f6" stroke-width="5.5" fill="none" />
+              <circle cx="52" cy="90" r="9" fill="#3b82f6" />
+              <circle cx="188" cy="90" r="26" stroke="#3b82f6" stroke-width="5.5" fill="none" />
+              <circle cx="188" cy="90" r="9" fill="#3b82f6" />
+              <path d="M66,70 Q76,46 98,40 Q122,33 148,36 Q170,40 186,62 Q176,76 158,78 Q112,84 68,78 Z" fill="#bfdbfe"
+                stroke="#93c5fd" stroke-width="1.5" />
+              <path d="M80,72 Q108,64 142,63 Q156,63 164,68 Q142,78 108,79 Q84,79 74,73 Z" fill="white" opacity=".5" />
+              <path d="M138,36 Q153,30 165,35 Q171,40 167,50 Q155,44 136,42 Z" fill="#dbeafe" opacity=".8" />
+              <path d="M78,76 Q102,70 126,69 Q142,69 154,74" stroke="#2563eb" stroke-width="3" stroke-linecap="round"
+                fill="none" />
+              <line x1="182" y1="64" x2="188" y2="90" stroke="#93c5fd" stroke-width="5" stroke-linecap="round" />
+              <line x1="52" y1="90" x2="78" y2="72" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" />
+              <path d="M178,50 Q186,46 191,52 Q188,61 181,61 Q176,56 178,50Z" fill="#fde68a" opacity=".9" />
+              <line x1="160" y1="44" x2="167" y2="34" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="163" y1="34" x2="174" y2="33" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M84,70 Q112,62 146,62" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" opacity=".5" />
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-bold text-lg">Yamaha Filano</h3>
+              <span class="text-xs bg-green-100 text-green-700 font-semibold px-2.5 py-1 rounded-full">Tersedia</span>
+            </div>
+            <p class="text-gray-400 text-xs font-bold uppercase tracking-wider mb-3">125cc · Elegant Matic</p>
+            <p class="text-gray-500 text-sm mb-4">Matic premium bergaya Eropa, ringan & nyaman, cocok untuk pria maupun
+              wanita yang ingin tampil beda.</p>
+            <div class="flex items-baseline gap-1 mb-5"><span class="text-2xl font-bold">Rp 80K</span><span
+                class="text-gray-400 text-sm">/hari</span></div>
+            <ul class="text-sm text-gray-500 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-wa text-xs"></i> 2 Helm
+              </li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-wa text-xs"></i> 2 Jas hujan gratis</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-wa text-xs"></i> Antar ke hotel/villa</li>
+            </ul>
+            <a href="https://wa.me/628113972162?text=Halo%2C%20saya%20mau%20booking%20Yamaha%20Filano"
+              class="block text-center bg-wa text-white font-bold py-3 rounded-2xl hover:bg-wa-dark transition-colors">
+              <i class="fab fa-whatsapp mr-2"></i>Booking Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center reveal">
+        <p class="text-gray-500 text-sm mb-3">Mau harga spesial atau sewa lebih dari 5 hari?</p>
+        <a href="https://wa.me/628113972162"
+          class="inline-flex items-center gap-2 text-wa font-bold text-sm hover:underline">
+          <i class="fab fa-whatsapp"></i> Chat WhatsApp kami sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════ CARA SEWA ════ -->
+  <section id="process" class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <span class="text-wa text-sm font-bold tracking-widest uppercase">Mudah & Cepat</span>
+        <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mt-3 mb-4">Cara Sewa Motor</h2>
+        <p class="text-gray-500 max-w-xl mx-auto">Booking simpel lewat WhatsApp, motor langsung diantar ke tempatmu atau bisa juga diambil di tempat kami.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8 relative">
+        <div class="hidden md:block absolute top-10 left-[calc(12.5%+20px)] right-[calc(12.5%+20px)] h-px bg-gray-100">
+        </div>
+        <div class="reveal reveal-d1 flex flex-col items-center text-center gap-4">
+          <div class="relative w-20 h-20 rounded-2xl bg-wa/10 flex items-center justify-center z-10">
+            <i class="fab fa-whatsapp text-wa text-3xl"></i>
+            <span
+              class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-wa text-white text-xs font-bold flex items-center justify-center">1</span>
+          </div>
+          <h3 class="font-bold text-gray-900">Chat WhatsApp</h3>
+          <p class="text-sm text-gray-500">Ceritakan kebutuhan, pilihan motor, dan tanggal sewa kamu.</p>
+        </div>
+        <div class="reveal reveal-d2 flex flex-col items-center text-center gap-4">
+          <div class="relative w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center z-10">
+            <i class="fas fa-calendar-check text-blue-500 text-3xl"></i>
+            <span
+              class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">2</span>
+          </div>
+          <h3 class="font-bold text-gray-900">Konfirmasi Booking</h3>
+          <p class="text-sm text-gray-500">Pilih motor, durasi, lokasi antar, dan konfirmasi pesanan.</p>
+        </div>
+        <div class="reveal reveal-d3 flex flex-col items-center text-center gap-4">
+          <div class="relative w-20 h-20 rounded-2xl bg-orange-50 flex items-center justify-center z-10">
+            <i class="fas fa-credit-card text-orange-500 text-3xl"></i>
+            <span
+              class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-bold flex items-center justify-center">3</span>
+          </div>
+          <h3 class="font-bold text-gray-900">Bayar DP</h3>
+          <p class="text-sm text-gray-500">DP 50% untuk mengamankan unit. Transfer atau tunai saat diantar.</p>
+        </div>
+        <div class="reveal reveal-d4 flex flex-col items-center text-center gap-4">
+          <div class="relative w-20 h-20 rounded-2xl bg-green-50 flex items-center justify-center z-10">
+            <i class="fas fa-motorcycle text-wa text-3xl"></i>
+            <span
+              class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-wa text-white text-xs font-bold flex items-center justify-center">4</span>
+          </div>
+          <h3 class="font-bold text-gray-900">Motor Diantar</h3>
+          <p class="text-sm text-gray-500">Diantar ke hotel/villa/bandara sesuai kesepakatan. Siap meluncur!</p>
+        </div>
+      </div>
+      <div class="text-center mt-14 reveal">
+        <a href="https://wa.me/628113972162"
+          class="inline-flex items-center gap-3 bg-wa text-white font-bold px-10 py-4 rounded-full text-base hover:bg-wa-dark transition-all hover:scale-105 shadow-lg shadow-green-200">
+          <i class="fab fa-whatsapp text-xl"></i> Mulai Booking Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════ KEUNGGULAN ════ -->
+  <section id="why" class="py-24 px-6 bg-gray-950 text-white relative overflow-hidden">
+    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-wa/5 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-blue-500/5 blur-3xl pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-14 reveal">
+        <span class="text-wa text-sm font-bold tracking-widest uppercase">Mengapa Kami</span>
+        <h2 class="font-serif text-4xl md:text-5xl mt-3 mb-4">Keunggulan Santika Rent Bali</h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Kami hadir untuk memastikan liburanmu di Bali jadi lebih mudah, aman, seru,
+          dan menyenangkan.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="reveal reveal-d1 bg-white/5 border border-white/10 rounded-3xl p-7 hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-wa/20 flex items-center justify-center mb-5"><i
+              class="fas fa-star text-wa text-xl"></i></div>
+          <h3 class="font-bold text-lg mb-2">Motor Baru & Prima</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">ZX25RR 2023, Honda Stylo, Yamaha Filano — semua unit terawat
+            & rutin diservis.</p>
+        </div>
+        <div
+          class="reveal reveal-d2 bg-white/5 border border-white/10 rounded-3xl p-7 hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-5"><i
+              class="fas fa-shield-alt text-blue-400 text-xl"></i></div>
+          <h3 class="font-bold text-lg mb-2">Aman & Terpercaya</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Servis darurat 24 jam. Masalah teknis bukan kelalaian
+            penyewa? Kami tangani gratis.</p>
+        </div>
+        <div
+          class="reveal reveal-d3 bg-white/5 border border-white/10 rounded-3xl p-7 hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center mb-5"><i
+              class="fas fa-truck text-orange-400 text-xl"></i></div>
+          <h3 class="font-bold text-lg mb-2">Antar ke Hotel & Villa</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Motor diantar ke lokasimu di area Kuta, Seminyak, Legian,
+            Jimbaran & Denpasar.</p>
+        </div>
+        <div
+          class="reveal reveal-d1 bg-white/5 border border-white/10 rounded-3xl p-7 hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-yellow-500/20 flex items-center justify-center mb-5"><i
+              class="fas fa-hard-hat text-yellow-400 text-xl"></i></div>
+          <h3 class="font-bold text-lg mb-2">Helm & Jas Hujan Gratis</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Setiap penyewaan sudah termasuk helm full face & jas hujan
+            tanpa biaya ekstra.</p>
+        </div>
+        <div
+          class="reveal reveal-d2 bg-white/5 border border-white/10 rounded-3xl p-7 hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center mb-5"><i
+              class="fas fa-comments text-pink-400 text-xl"></i></div>
+          <h3 class="font-bold text-lg mb-2">Respons Cepat 24/7</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Tim kami aktif 24 jam via WhatsApp. Pertanyaan dijawab dalam
+            hitungan menit.</p>
+        </div>
+        <div
+          class="reveal reveal-d3 bg-white/5 border border-white/10 rounded-3xl p-7 hover:bg-white/8 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-wa/20 flex items-center justify-center mb-5"><i
+              class="fas fa-tag text-wa text-xl"></i></div>
+          <h3 class="font-bold text-lg mb-2">Harga Transparan</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">All-in, tidak ada biaya tersembunyi. Diskon khusus sewa lebih
+            dari 7 hari.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FAQ ════ -->
+  <section id="faq" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="text-wa text-sm font-bold tracking-widest uppercase">FAQ</span>
+        <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mt-3 mb-4">Pertanyaan Umum</h2>
+      </div>
+      <div class="space-y-3 reveal">
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>Apa syarat untuk menyewa motor?</span>
+            <i class="faq-icon fas fa-plus text-wa text-sm flex-shrink-0 ml-4"></i>
+          </button>
+          <div class="faq-body px-6 pb-5">
+            <p class="text-gray-500 text-sm leading-relaxed">Cukup KTP/Passport aktif sebagai jaminan, SIM C aktif, dan
+              DP 50% untuk konfirmasi booking. Mudah & tanpa ribet!</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>Apakah ZX25RR bisa disewa pemula?</span>
+            <i class="faq-icon fas fa-plus text-wa text-sm flex-shrink-0 ml-4"></i>
+          </button>
+          <div class="faq-body px-6 pb-5">
+            <p class="text-gray-500 text-sm leading-relaxed">ZX25RR direkomendasikan untuk pengendara berpengalaman
+              dengan motor sport. Untuk pemula, kami sarankan Honda Stylo atau Yamaha Filano yang lebih mudah
+              dikendarai.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>Berapa minimum hari sewa?</span>
+            <i class="faq-icon fas fa-plus text-wa text-sm flex-shrink-0 ml-4"></i>
+          </button>
+          <div class="faq-body px-6 pb-5">
+            <p class="text-gray-500 text-sm leading-relaxed">Minimum sewa 1 hari (24 jam). Sewa 3 hari atau lebih
+              mendapat diskon khusus — hubungi kami untuk harga terbaik.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>Apakah motor diantar ke hotel/villa/bandara?</span>
+            <i class="faq-icon fas fa-plus text-wa text-sm flex-shrink-0 ml-4"></i>
+          </button>
+          <div class="faq-body px-6 pb-5">
+            <p class="text-gray-500 text-sm leading-relaxed">Ya! Gratis antar-jemput di area Kuta, Seminyak, Legian, dan Airport. Area lain dikenakan biaya sesuai jarak.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>Bagaimana jika motor bermasalah di jalan?</span>
+            <i class="faq-icon fas fa-plus text-wa text-sm flex-shrink-0 ml-4"></i>
+          </button>
+          <div class="faq-body px-6 pb-5">
+            <p class="text-gray-500 text-sm leading-relaxed">Tim kami siap untuk membantu → kami kirim bantuan untuk membantu anda.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>Bisa sewa untuk wisatawan asing?</span>
+            <i class="faq-icon fas fa-plus text-wa text-sm flex-shrink-0 ml-4"></i>
+          </button>
+          <div class="faq-body px-6 pb-5">
+            <p class="text-gray-500 text-sm leading-relaxed">Tentu! Cukup Passport & SIM internasional. Kami juga
+              melayani dalam Bahasa Inggris via WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 text-center bg-white rounded-3xl p-8 border border-gray-100 reveal">
+        <h3 class="font-bold text-gray-900 mb-2">Masih ada pertanyaan?</h3>
+        <p class="text-gray-500 text-sm mb-5">Tim kami siap membantu 10.00 WITA - 22.00 WITA via WhatsApp.</p>
+        <a href="https://wa.me/628113972162"
+          class="inline-flex items-center gap-2 bg-wa text-white font-bold px-7 py-3 rounded-full hover:bg-wa-dark transition-colors">
+          <i class="fab fa-whatsapp text-lg"></i> Chat WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════ CTA BANNER ════ -->
+  <section class="relative py-28 px-6 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=2000"
+        alt="Bali" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/62"></div>
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center text-white reveal">
+      <h2 class="font-serif text-4xl md:text-5xl mb-5 leading-tight">Siap Jelajahi Bali<br>dengan Motor Pilihan?</h2>
+      <p class="text-white/75 mb-8">Booking sekarang via WhatsApp — mudah, cepat, terpercaya.</p>
+      <a href="https://wa.me/628113972162"
+        class="inline-flex items-center gap-3 bg-white text-gray-900 font-bold px-10 py-4 rounded-full text-base hover:scale-105 transition-all shadow-2xl">
+        <i class="fab fa-whatsapp text-wa text-xl"></i> Chat WhatsApp untuk Booking
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="bg-gray-950 text-white py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <a href="#home" class="flex items-center gap-2 mb-4">
+            <div class="w-7 h-7 rounded-lg bg-red-500 flex items-center justify-center"><i
+                class="fas fa-map-marker-alt text-white text-xs"></i></div>
+            <span class="font-bold text-base">Santika's Rent</span>
+          </a>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Sewa motor dan motor sport di Bali — Kawasaki ZX25RR,
+            Honda Stylo,
+            Yamaha Filano. Antar ke hotel & villa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-wider mb-5 text-gray-400">Navigasi</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#bikes" class="text-gray-400 hover:text-white transition-colors">Motor Kami</a></li>
+            <li><a href="#process" class="text-gray-400 hover:text-white transition-colors">Cara Sewa</a></li>
+            <li><a href="#why" class="text-gray-400 hover:text-white transition-colors">Keunggulan</a></li>
+            <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm uppercase tracking-wider mb-5 text-gray-400">Kontak</h4>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start gap-3"><i class="fab fa-whatsapp text-wa mt-0.5"></i><a
+                href="https://wa.me/628113972162" class="text-gray-400 hover:text-white transition-colors">+62
+                811-3972-162</a></li>
+            <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-red-400 mt-0.5"></i><span
+                class="text-gray-400">Kuta, Badung, Bali — Indonesia</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-clock text-blue-400 mt-0.5"></i><span
+                class="text-gray-400">Buka 10.00 WITA - 22.00 WITA via WhatsApp</span></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <span>© 2026 Santika's Rent</span>
+        <span>Designed for the enjoyment of Bali tourist</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WA -->
+  <a href="https://wa.me/628113972162"
+    class="wa-float fixed bottom-6 right-6 z-50 w-14 h-14 bg-wa rounded-full flex items-center justify-center shadow-lg shadow-green-400/40 hover:scale-110 transition-transform"
+    title="Chat WhatsApp">
+    <i class="fab fa-whatsapp text-white text-2xl relative z-10"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
