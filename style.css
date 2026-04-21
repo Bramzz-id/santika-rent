@@ -1,49 +1,235 @@
-:root { --wa: #25D366; }
-  html  { scroll-behavior: smooth; }
-  body  { font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+:root {
+  --wa: #25D366;
+}
 
-  @keyframes fadeUp   { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
-  @keyframes scrollLn { 0%,100%{opacity:.4;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.3)} }
-  @keyframes float    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-  @keyframes pulseRng { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(1.75);opacity:0} }
-  @keyframes marquee  { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+html {
+  scroll-behavior: smooth;
+}
 
-  .anim-1{opacity:0;animation:fadeUp .7s ease forwards .10s}
-  .anim-2{opacity:0;animation:fadeUp .7s ease forwards .28s}
-  .anim-3{opacity:0;animation:fadeUp .7s ease forwards .46s}
-  .anim-4{opacity:0;animation:fadeUp .7s ease forwards .64s}
-  .anim-5{opacity:0;animation:fadeUp .7s ease forwards .90s}
+body {
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
 
-  .scroll-line{width:1px;height:36px;background:rgba(255,255,255,.45);animation:scrollLn 1.8s ease-in-out infinite}
-  .marquee-track{display:flex;animation:marquee 24s linear infinite;width:max-content}
-  .marquee-wrap{overflow:hidden}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
 
-  .bike-card{transition:transform .3s ease,box-shadow .3s ease}
-  .bike-card:hover{transform:translateY(-7px);box-shadow:0 28px 60px rgba(0,0,0,.13)}
-  .bike-img{animation:float 4s ease-in-out infinite}
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
-  .wa-float::before{content:'';position:absolute;inset:0;border-radius:9999px;background:var(--wa);animation:pulseRng 1.8s ease-out infinite}
+@keyframes scrollLn {
 
-  header.scrolled{background:rgba(255,255,255,.96)!important;backdrop-filter:blur(14px);box-shadow:0 2px 20px rgba(0,0,0,.08)}
-  header.scrolled .nav-link{color:#111!important}
-  header.scrolled .logo-text{color:#111!important}
-  header.scrolled .btn-wa-nav{background:var(--wa)!important;border-color:var(--wa)!important;color:#fff!important}
+  0%,
+  100% {
+    opacity: .4;
+    transform: scaleY(1)
+  }
 
-  .reveal{opacity:0;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease}
-  .reveal.visible{opacity:1;transform:translateY(0)}
-  .reveal-d1{transition-delay:.10s}
-  .reveal-d2{transition-delay:.20s}
-  .reveal-d3{transition-delay:.30s}
-  .reveal-d4{transition-delay:.40s}
+  50% {
+    opacity: 1;
+    transform: scaleY(1.3)
+  }
+}
 
-  .faq-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
-  .faq-body.open{max-height:400px}
-  .faq-icon{transition:transform .35s ease}
-  .faq-icon.open{transform:rotate(45deg)}
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes pulseRng {
+  0% {
+    transform: scale(1);
+    opacity: .6
+  }
+
+  100% {
+    transform: scale(1.75);
+    opacity: 0
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(-50%)
+  }
+}
+
+.anim-1 {
+  opacity: 0;
+  animation: fadeUp .7s ease forwards .10s
+}
+
+.anim-2 {
+  opacity: 0;
+  animation: fadeUp .7s ease forwards .28s
+}
+
+.anim-3 {
+  opacity: 0;
+  animation: fadeUp .7s ease forwards .46s
+}
+
+.anim-4 {
+  opacity: 0;
+  animation: fadeUp .7s ease forwards .64s
+}
+
+.anim-5 {
+  opacity: 0;
+  animation: fadeUp .7s ease forwards .90s
+}
+
+.scroll-line {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, .45);
+  animation: scrollLn 1.8s ease-in-out infinite
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 24s linear infinite;
+  width: max-content
+}
+
+.marquee-wrap {
+  overflow: hidden
+}
+
+.bike-card {
+  transition: transform .3s ease, box-shadow .3s ease
+}
+
+.bike-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, .13)
+}
+
+.bike-img {
+  width: 100%;
+  height: 100%;
+  /* object-contain: contain; */
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
+}
+
+.wa-float::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--wa);
+  animation: pulseRng 1.8s ease-out infinite
+}
+
+/* Update pada bagian Header */
+header {
+  min-height: 80px;
+  /* Memberikan ruang napas untuk logo besar */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header.scrolled {
+  padding-top: 0.5rem !important;
+  /* Memperkecil padding saat scroll */
+  padding-bottom: 0.5rem !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Penyesuaian Logo agar tetap proporsional */
+header .logo-container {
+  transition: transform 0.3s ease;
+}
+
+header.scrolled .logo-container {
+  transform: scale(0.85);
+  /* Mengecilkan logo sedikit saat di-scroll agar navbar ramping */
+  transform-origin: left center;
+}
+
+header.scrolled .nav-link {
+  color: #111 !important
+}
+
+header.scrolled .logo-text {
+  color: #111 !important
+}
+
+header.scrolled .btn-wa-nav {
+  background: var(--wa) !important;
+  border-color: var(--wa) !important;
+  color: #fff !important
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .65s ease, transform .65s ease
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+.reveal-d1 {
+  transition-delay: .10s
+}
+
+.reveal-d2 {
+  transition-delay: .20s
+}
+
+.reveal-d3 {
+  transition-delay: .30s
+}
+
+.reveal-d4 {
+  transition-delay: .40s
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease
+}
+
+.faq-body.open {
+  max-height: 400px
+}
+
+.faq-icon {
+  transition: transform .35s ease
+}
+
+.faq-icon.open {
+  transform: rotate(45deg)
+}
 
 #hamburger {
-  color: #9ca3af; /* Abu-abu (gray-400) */
+  color: #9ca3af;
+  /* Abu-abu (gray-400) */
 }
+
 header.scrolled #hamburger {
   color: #111827 !important;
 }
